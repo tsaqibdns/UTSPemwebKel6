@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotoin - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="profile.css">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">Fotoin</div>
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-bar" placeholder="Cari" />
+      </div>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reference.html">Reference</a>
+        <a href="profile.html">Profile</a>
+      </div>
+    </nav>
+
+    <div>
+      <img class="header_img" src="assets/images/fotoinheader1.png" alt="" />
+    </div>
+
+    <div class="bio">
+      <div class="profile-pic">
+        <img id="profileImage" src="assets/images/profil2.png" alt="" />
+      </div>
+
+      <div class="bio-text">
+        <div class="bio-header">
+          <h1 id="profileName">User1001</h1>
+          <button
+            class="edit"
+            onclick="window.location.href='edit_profil.html'"
+          >
+            <i class="fa-solid fa-gear"></i>
+          </button>
+        </div>
+        <p id="profileAbout">Deskripsi user</p>
+      </div>
+    </div>
+    <hr class="custom-hr" />
+
+    <div class="status">
+      <div>
+        <h3>192</h3>
+        <p>Followers</p>
+      </div>
+      <div>
+        <h3>100</h3>
+        <p>Following</p>
+      </div>
+      <div>
+        <h3>120</h3>
+        <p>Posts</p>
+      </div>
+    </div>
+    <div class="tabs">
+      <span class="tab active" onclick="toggleView('gallery')">Foto</span>
+      <span class="tab" onclick="toggleView('collage')">Kolase</span>
+    </div>
+
+    <div id="gallery" class="gallery">
+      <div class="pin">
+        <img src="assets/images/foto (1).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (2).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (3).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (4).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (5).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (6).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (8).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (9).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (10).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (11).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (12).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (9).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (10).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (11).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="pin">
+        <img src="assets/images/foto (12).png" alt="" />
+        <div class="overlay">
+          <div class="top-buttons">
+            <span class="profile"
+              >Profil <i class="fa-solid fa-caret-down"></i
+            ></span>
+            <button class="btn">Simpan</button>
+          </div>
+          <div class="bottom-buttons">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-ellipsis"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="collage" class="collage-container" style="display: none">
+      <table>
+        <tr>
+          <td class="collage-item" onclick="goToDetail('Academia')">
+            <div class="collage-grid">
+              <img src="assets/images/foto (5).png" alt="" />
+              <img src="assets/images/foto (6).png" alt="" />
+              <img src="assets/images/foto (7).png" alt="" />
+              <img src="assets/images/foto (8).png" alt="" />
+            </div>
+            <p class="title">Academia</p>
+            <p class="count">20 Foto</p>
+          </td>
+          <td class="collage-item" onclick="goToDetail('Yang Saya Simpan')">
+            <div class="collage-grid">
+              <img src="assets/images/foto (5).png" alt="" />
+              <img src="assets/images/foto (6).png" alt="" />
+              <img src="assets/images/foto (7).png" alt="" />
+              <img src="assets/images/foto (8).png" alt="" />
+            </div>
+            <p class="title">Yang Saya Simpan</p>
+            <p class="count">20 Foto</p>
+          </td>
+          <td class="collage-item" onclick="goToDetail('Clothes Ref')">
+            <div class="collage-grid">
+              <img src="assets/images/foto (5).png" alt="" />
+              <img src="assets/images/foto (6).png" alt="" />
+              <img src="assets/images/foto (7).png" alt="" />
+              <img src="assets/images/foto (8).png" alt="" />
+            </div>
+            <p class="title">Clothes Ref</p>
+            <p class="count">20 Foto</p>
+          </td>
+          <td class="collage-item">
+            <div class="collage-grid" onclick="goToDetail('Yang Saya Simpan') ">
+              <img src="assets/images/foto (5).png" alt="" />
+              <img src="assets/images/foto (6).png" alt="" />
+              <img src="assets/images/foto (7).png" alt="" />
+              <img src="assets/images/foto (8).png" alt="" />
+            </div>
+            <p class="title">Yang Saya Simpan</p>
+            <p class="count">20 Foto</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+<script>
+  function toggleView(type) {
+    if (type === "gallery") {
+      document.getElementById("gallery").style.display = "block";
+      document.getElementById("collage").style.display = "none";
+    } else {
+      document.getElementById("gallery").style.display = "none";
+      document.getElementById("collage").style.display = "block";
+    }
+
+    document
+      .querySelectorAll(".tab")
+      .forEach((tab) => tab.classList.remove("active"));
+    document
+      .querySelector(`.tab[onclick="toggleView('${type}')"]`)
+      .classList.add("active");
+  }
+
+  function goToDetail(kolaseName) {
+    window.location.href = "kolase_detail.html?name=" + kolaseName;
+  }
+
+  // Load data dari localStorage saat halaman dimuat
+  window.onload = function () {
+    const firstName = localStorage.getItem("firstName") || "Nama Depan";
+    const lastName = localStorage.getItem("lastName") || "Nama Belakang";
+    const about = localStorage.getItem("about") || "Deskripsi pengguna.";
+    const savedImage = localStorage.getItem("profileImage");
+
+    document.getElementById("profileName").textContent =
+      firstName + " " + lastName;
+    document.getElementById("profileAbout").textContent = about;
+
+    if (savedImage) {
+      document.getElementById("profileImage").src = savedImage;
+    }
+  };
+</script>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotoin - Edit Profile</title>
+    <link rel="stylesheet" href="edit_profil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  </head>
+  <body>
+  
+    <nav class="navbar">
+      <div class="logo">Fotoin</div>
+      <div class="search-container">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" class="search-bar" placeholder="Cari" />
+      </div>
+      <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="galeri.html">Gallery</a>
+        <a href="referensiProfil\reference.html">Reference</a>
+        <a href="referensiProfil\profile.html">Profile</a>
+      </div>
+    </nav>
+
+    <div>
+      <img class="header_img" src="assets/images/fotoinheader1.png" alt="" />
+    </div>
+
+    <div class="page">
+      <div class="container">
+        <h2>Edit Profil</h2>
+        <p>
+          Jaga detail privasi Anda tetap pribadi. Informasi yang Anda tambahkan
+          di sini dapat dilihat oleh siapa pun yang dapat melihat profil Anda.
+        </p>
+
+        <div class="profile-pic">
+          <img
+            id="profileImage"
+            src="assets/images/profil2.png"
+            alt="Foto Profil"
+          />
+          <label for="uploadImage">Ganti</label>
+          <input type="file" id="uploadImage" accept="image/*" />
+        </div>
+
+        <div class="form-group">
+          <div>
+            <label>Nama depan</label>
+            <input type="text" id="namaDepan" placeholder="Nama Depan" />
+          </div>
+          <div>
+            <label>Nama belakang</label>
+            <input type="text" id="namaBelakang" placeholder="Nama Belakang" />
+          </div>
+        </div>
+
+        <label>Tentang</label>
+        <textarea
+          id="about"
+          rows="8"
+          placeholder="Ceritakan tentang Anda"
+        ></textarea>
+
+        <label>Situs web</label>
+        <input id="url" type="url" placeholder="https://" />
+
+        <label>Nama pengguna</label>
+        <input type="text" id="username" placeholder="Username" />
+
+        <button
+          class="submit-btn"
+          type="button"
+          onclick="resetProfile()"
+          class="reset-btn"
+        >
+          Reset Profil
+        </button>
+        <button class="submit-btn" type="button" onclick="saveProfile()">
+          Simpan
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="edit_profile.js"></script>

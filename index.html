@@ -1,42 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shotlist Organizer</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOTOIN</title>
+    <link rel="stylesheet" href="gaya.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1 contenteditable="true" class="editable" style="font-weight: normal;">Shotlist</h1>
-            <h3>|</h3>
-            <span id="shotCount">0 Shot</span>
-            <button id="addNew" class="button-above">+ Add New</button>
-        </div>
+      <h2>FOTOIN</h2>
+      <h3>Login</h3>
+      <form action="login" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
 
-        <!-- Tabel -->
-        <table id="shotTable">
-            <thead>
-                <tr>
-                    <th>Status</th>
-                    <th>Shot</th>
-                    <th>Image</th>
-                    <th>Description</th>
-                    <th>Subject</th>
-                    <th>Shot Size</th>
-                    <th>Shot Type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Row ditambahkan di sini -->
-            </tbody>
-        </table>
-        <br>
-        <button id="addShot" class="button-below">+ Shot</button>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit" href="home\home.html">Login</button>
+        <a href="forget.html" class="reset-password">Lupa Password?</a>
+      </form>
+      <button class="google-login-button" onclick="loginWithGoogle()">
+        <img src="google.jpg" alt="Google" />
+      </button>
+      <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
     </div>
-
-    <script src="script.js"></script>
-</body>
+    <script>
+      function loginWithGoogle() {
+        alert("Fitur login dengan Google belum tersedia.");
+      }
+    </script>
+  </body>
 </html>

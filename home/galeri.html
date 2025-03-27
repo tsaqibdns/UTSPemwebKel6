@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galeri - FOTO.in</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Fotoin</div>
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" class="search-bar" placeholder="Cari" />
+    </div>
+    <div class="menu">
+      <a href="home.html">Home</a>
+      <a href="galeri.html">Gallery</a>
+      <a href="referensiProfil\reference.html">Reference</a>
+      <a href="referensiProfil\profile.html">Profile</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="gallery">
+      <h2>Galeri Gambar</h2>
+      <div class="card-grid">
+        <!-- Gambar 1 -->
+        <div class="card">
+          <img src="image/outfit.jpg" alt="Gambar 1" id="img1" />
+          <div class="card-buttons">
+            <button onclick="unduh('img1')">Unduh</button>
+            <button onclick="bagikan(this)">Bagikan</button>
+            <button onclick="sematkan('img1')">Sematkan</button>
+            <button onclick="sembunyikan(this)">Sembunyikan</button>
+            <button onclick="laporkan()">Laporkan</button>
+          </div>
+        </div>
+
+        <!-- Gambar 2 -->
+        <div class="card">
+          <img src="image/outfit2.jpg" alt="Gambar 2" id="img2" />
+          <div class="card-buttons">
+            <button onclick="unduh('img2')">Unduh</button>
+            <button onclick="bagikan(this)">Bagikan</button>
+            <button onclick="sematkan('img2')">Sematkan</button>
+            <button onclick="sembunyikan(this)">Sembunyikan</button>
+            <button onclick="laporkan()">Laporkan</button>
+          </div>
+        </div>
+
+        <!-- Gambar 3 -->
+        <div class="card">
+          <img src="image/outfit3.jpg" alt="Gambar 3" id="img3" />
+          <div class="card-buttons">
+            <button onclick="unduh('img3')">Unduh</button>
+            <button onclick="bagikan(this)">Bagikan</button>
+            <button onclick="sematkan('img3')">Sematkan</button>
+            <button onclick="sembunyikan(this)">Sembunyikan</button>
+            <button onclick="laporkan()">Laporkan</button>
+          </div>
+        </div>
+
+        <!-- Gambar 4 -->
+        <div class="card">
+          <img src="image/outfit4.jpg" alt="Gambar 4" id="img4" />
+          <div class="card-buttons">
+            <button onclick="unduh('img4')">Unduh</button>
+            <button onclick="bagikan(this)">Bagikan</button>
+            <button onclick="sematkan('img4')">Sematkan</button>
+            <button onclick="sembunyikan(this)">Sembunyikan</button>
+            <button onclick="laporkan()">Laporkan</button>
+          </div>
+        </div>
+
+        <!-- Gambar 5 -->
+        <div class="card">
+          <img src="image/outfit5.jpg" alt="Gambar 5" id="img5" />
+          <div class="card-buttons">
+            <button onclick="unduh('img5')">Unduh</button>
+            <button onclick="bagikan(this)">Bagikan</button>
+            <button onclick="sematkan('img5')">Sematkan</button>
+            <button onclick="sembunyikan(this)">Sembunyikan</button>
+            <button onclick="laporkan()">Laporkan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function unduh(id) {
+      const img = document.getElementById(id);
+      const link = document.createElement("a");
+      link.href = img.src;
+      link.download = "foto-fotoin.jpg";
+      link.click();
+    }
+
+    function bagikan(button) {
+      const img = button.closest('.card').querySelector('img');
+      const url = img.src;
+      const whatsapp = `https://wa.me/?text=Lihat gambar dari FOTO.in: ${encodeURIComponent(url)}`;
+      prompt("Bagikan gambar ini:\n(Link & WhatsApp)", `${url}\n\nWhatsApp: ${whatsapp}`);
+    }
+
+    function sematkan(id) {
+      const img = document.getElementById(id);
+      const embed = `<img src="${img.src}" alt="Dari FOTO.in">`;
+      prompt("Kode semat (embed) untuk web/blog:", embed);
+    }
+
+    function sembunyikan(button) {
+      const card = button.closest('.card');
+      card.style.display = "none";
+    }
+
+    function laporkan() {
+      alert("Terima kasih, laporan Anda akan segera ditinjau.");
+    }
+  </script>
+</body>
+</html>
