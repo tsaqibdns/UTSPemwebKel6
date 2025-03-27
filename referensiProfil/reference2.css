@@ -7,7 +7,6 @@ body {
   background: #f8f8f8;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -29,7 +28,6 @@ body {
   align-items: center;
   position: relative;
   width: 100%;
-  /* Pastikan container mengikuti lebar parent */
   max-width: 950px;
 }
 
@@ -43,9 +41,7 @@ body {
 .search-bar {
   width: 100%;
   max-width: 950px;
-  /* Biar tidak terlalu besar di layar besar */
   padding: 10px 15px 10px 40px;
-  /* Sesuaikan dengan posisi ikon */
   background: #f3f2f2;
   border: 1px solid #b7b5b5;
   border-radius: 10px;
@@ -66,12 +62,9 @@ body {
   font-weight: bold;
 }
 
-/* Gallery menggunakan CSS Grid */
 .gallery {
   column-count: 4;
-  /* Jumlah kolom */
   column-gap: 10px;
-  /* Jarak antar kolom */
   padding: 20px;
 }
 
@@ -92,13 +85,10 @@ body {
   transition: filter 0.3s ease-in-out;
 }
 
-/* Efek hover */
 .pin:hover img {
   filter: brightness(0.5);
-  /* Membuat gambar lebih gelap saat hover */
 }
 
-/* Overlay yang muncul saat hover */
 .overlay {
   position: absolute;
   top: 0;
@@ -117,7 +107,6 @@ body {
   opacity: 1;
 }
 
-/* Bagian atas overlay (Profil & Tombol Simpan) */
 .top-buttons {
   display: flex;
   justify-content: space-between;
@@ -125,7 +114,6 @@ body {
   width: 100%;
 }
 
-/* Profil */
 .profile {
   color: white;
   font-size: 14px;
@@ -147,7 +135,6 @@ body {
   margin-right: 25px;
 }
 
-/* Bagian bawah overlay (Ikon) */
 .bottom-buttons {
   display: flex;
   justify-content: flex-end;
@@ -164,44 +151,33 @@ body {
   cursor: pointer;
 }
 
-/* 🔹 Saat layar lebih kecil dari 1024px (Tablet) */
 @media (max-width: 1024px) {
   .gallery {
     column-count: 3;
-    /* Kurangi jumlah kolom */
   }
 }
 
-/* 🔹 Saat layar lebih kecil dari 768px (HP besar) */
 @media (max-width: 768px) {
   .gallery {
     column-count: 2;
-    /* Kurangi jadi 2 kolom */
   }
 }
 
-/* 🔹 Saat layar lebih kecil dari 480px (HP kecil) */
 @media (max-width: 480px) {
   .gallery {
     column-count: 1;
-    /* Jadi satu kolom */
   }
 }
 
-/* Container utama */
 .detail-container {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Pusatkan secara horizontal */
   justify-content: center;
-
-  /* Pastikan tetap berada di tengah */
   text-align: center;
 }
 
-/* Atur gambar */
 .detail-image {
   position: relative;
   width: 100%;
@@ -210,16 +186,13 @@ body {
   overflow: hidden;
 }
 
-/* Gambar dalam container */
 .detail-image img {
   width: 100%;
   display: block;
   border-radius: 10px;
   filter: brightness(50%);
-  /* 100% adalah asli, makin kecil makin gelap */
 }
 
-/* Overlay teks di atas gambar */
 .overlay-text {
   position: absolute;
   top: 50%;
@@ -231,7 +204,7 @@ body {
   text-align: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
-/* Deskripsi teks di bawah gambar */
+
 .description {
   margin-top: 15px;
   font-size: 20px;

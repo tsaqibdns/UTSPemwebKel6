@@ -7,27 +7,29 @@ document.addEventListener("DOMContentLoaded", () => {
     let rowCount = 0;
 
     function updateShotCount() {
+        rowCount = shotTable.querySelectorAll("tr").length; 
         shotCount.textContent = `${rowCount} Shot`;
+    }
+
+    function updateShotNumbers() {
+        const rows = shotTable.querySelectorAll("tr");
+        rows.forEach((row, index) => {
+            row.querySelector(".shot-number").textContent = index + 1;
+        });
+        updateShotCount();
     }
 
     function addRow() {
         const row = shotTable.insertRow();
-
-        if (rowCount % 2 === 0) {
-            row.classList.add("even-row");
-        } else {
-            row.classList.add("odd-row");
-        }
-
         row.innerHTML = `
             <td><input type="checkbox" class="status-indicator"></td>
-            <td>${rowCount + 1}</td>
+            <td class="shot-number">${rowCount + 1}</td>
             <td class="image-upload">
                 <input type="file" accept="image/*" class="file-input" hidden>
                 <div class="upload-box">Upload</div>
             </td>
-            <td contenteditable="true" id="kotak-edit" class="editable" placeholder="Description">Description</td>
-            <td contenteditable="true" id="kotak-edit" class="editable" placeholder="Subject">Subject</td>
+            <td contenteditable="true" class="editable">Description</td>
+            <td contenteditable="true" class="editable">Subject</td>
             <td>
                 <select class="shot-size">
                     <option value="Shot Size">Shot Size</option>
@@ -64,59 +66,29 @@ document.addEventListener("DOMContentLoaded", () => {
             </td>
         `;
 
-        // Event listener untuk hapus row
         row.querySelector(".delete-row").addEventListener("click", function () {
             row.remove();
-            rowCount--;
-            updateShotCount();
+            updateShotNumbers();
         });
 
-        // Checkbox status indikator
-        const checkbox = row.querySelector(".status-indicator");
-        checkbox.addEventListener("change", function () {
-            if (this.checked) {
-                row.classList.add("completed-row");
-            } else {
-                row.classList.remove("completed-row");
-            }
-        });
-
-        // Event listener buat custom dropdown
-        const shotSizeDropdown = row.querySelector(".shot-size");
-        shotSizeDropdown.addEventListener("change", (e) => {
-            if (e.target.value === "Custom") {
-                const customValue = prompt("Enter custom shot size:");
-                if (customValue) {
-                    const newOption = document.createElement("option");
-                    newOption.value = customValue;
-                    newOption.textContent = customValue;
-                    newOption.selected = true;
-                    shotSizeDropdown.appendChild(newOption);
-                }
-            }
-        });
-
-        const shotTypeDropdown = row.querySelector(".shot-type");
-        shotTypeDropdown.addEventListener("change", (e) => {
-            if (e.target.value === "Custom") {
-                const customValue = prompt("Enter custom shot type:");
-                if (customValue) {
-                    const newOption = document.createElement("option");
-                    newOption.value = customValue;
-                    newOption.textContent = customValue;
-                    newOption.selected = true;
-                    shotTypeDropdown.appendChild(newOption);
-                }
-            }
-        });
-
-        // Event upload image
         const uploadBox = row.querySelector(".upload-box");
         const fileInput = row.querySelector(".file-input");
+
         uploadBox.addEventListener("click", () => fileInput.click());
 
-        rowCount++;
-        updateShotCount();
+        fileInput.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    uploadBox.innerHTML = `<img src="${e.target.result}" class="uploaded-image">`;
+                    uploadBox.style.border = "none"; 
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        updateShotNumbers(); 
     }
 
     addShotBtn.addEventListener("click", addRow);

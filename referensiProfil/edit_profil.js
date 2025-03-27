@@ -19,7 +19,7 @@ function saveProfile() {
       localStorage.removeItem("lastName");
       localStorage.removeItem("about");
       localStorage.removeItem("profileImage");
-      location.reload(); // Muat ulang halaman
+      location.reload(); 
     }
   }
 

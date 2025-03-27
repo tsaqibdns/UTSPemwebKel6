@@ -11,15 +11,15 @@ body {
     padding: 10px 20px;
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .logo {
+.logo {
     font-size: 20px;
     font-weight: bold;
     color: rgba(255, 0, 0, 0.64);
-  }
+}
 
-  .search-container {
+.search-container {
     display: flex;
     margin-left: auto;
     justify-content: center;
@@ -27,16 +27,16 @@ body {
     position: relative;
     width: 100%;
     max-width: 950px;
-  }
+}
 
-  .search-icon {
+.search-icon {
     position: absolute;
     left: 15px;
     color: gray;
     font-size: 18px;
-  }
+}
 
-  .search-bar {
+.search-bar {
     width: 100%;
     max-width: 950px;
     padding: 10px 15px 10px 40px;
@@ -45,20 +45,20 @@ body {
     border-radius: 10px;
     outline: none;
     font-size: 16px;
-  }
+}
 
-  .menu {
+.menu {
     display: flex;
     gap: 20px;
     margin-left: auto;
     margin-right: 30px;
-  }
+}
 
-  .menu a {
+.menu a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-  }
+}
 
 .container {
     margin: auto;
@@ -66,7 +66,6 @@ body {
     border-radius: 12px;
 }
 
-/* Header */
 .header {
     display: flex;
     align-items: center;
@@ -74,7 +73,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Tabel */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -93,7 +91,6 @@ th {
     background-color: rgba(255, 0, 0, 0.64);
 }
 
-/* Efek Hover */
 button, .upload-box, .editable, select {
     cursor: pointer;
 }
@@ -135,7 +132,6 @@ button:hover {
     font-size: medium;
 }
 
-/* Upload Box */
 .upload-box {
     width: 80px;
     height: 80px;
@@ -151,7 +147,6 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Dropdown Custom */
 select {
     border: none;
     padding: 5px;
@@ -189,28 +184,28 @@ select {
     transform: translate(-50%, -50%);
 }
 
-.odd-row {
-    background-color: #f0f0f0; /* Abu muda */
-    transition: background-color 0.2s ease-in-out;
+
+.upload-box {
+    width: 80px;  /* Ukuran tetap */
+    height: 80px;
+    border: 2px dashed #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden; /* Biar gambar nggak bablas */
+    position: relative;
 }
 
-.even-row {
-    background-color: #ffffff; /* Putih */
-    transition: background-color 0.2s ease-in-out;
+.upload-box img.uploaded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.odd-row:hover {
-    background-color: #e0e0e0; /* Lebih gelap dari abu muda */
-}
-
-.even-row:hover {
-    background-color: #f8f8f8; /* Sedikit gelap dari putih */
-}
-
-.completed-row {
-    background-color: #a8e6a2 !important; /* Warna hijau muda */
-}
-
-.completed-row:hover {
-    background-color: #92d891 !important; /* Warna hijau lebih gelap saat hover */
+.uploaded-image {
+    width: 100%;   /* Fit ke lebar tabel */
+    height: 100%;  /* Fit ke tinggi tabel */
+    object-fit: cover; /* Isi penuh tanpa distorsi */
+    position: absolute;
 }

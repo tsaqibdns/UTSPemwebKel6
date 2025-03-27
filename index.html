@@ -10,16 +10,16 @@
     <div class="container">
       <h2>FOTOIN</h2>
       <h3>Login</h3>
-      <form action="login" method="POST">
+      <form action="home/home.html" method="GET">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required />
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required />
 
-        <button type="submit" href="home\home.html">Login</button>
-        <a href="forget.html" class="reset-password">Lupa Password?</a>
+        <button type="submit">Login</button>
       </form>
+      <a href="forget.html" class="reset-password">Lupa Password?</a>
       <button class="google-login-button" onclick="loginWithGoogle()">
         <img src="google.jpg" alt="Google" />
       </button>
